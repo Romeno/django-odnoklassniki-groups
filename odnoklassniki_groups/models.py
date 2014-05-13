@@ -88,6 +88,13 @@ class Group(OdnoklassnikiPKModel):
 
         super(Group, self).parse(response)
 
+    def fetch_albums(self, **kwargs):
+        if 'odnoklassniki_photos' not in settings.INSTALLED_APPS:
+            raise ImproperlyConfigured("Application 'odnoklassniki_photos' not in INSTALLED_APPS")
+
+        from odnoklassniki_photos.models import Album
+        return Album.remote.fetch(group=self, **kwargs)
+
 '''
 Fields, dependent on other applications
 '''

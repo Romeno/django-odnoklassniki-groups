@@ -22,6 +22,7 @@ Django Odnoklassniki Groups
 
     # oauth-tokens settings
     OAUTH_TOKENS_HISTORY = True                                             # to keep in DB expired access tokens
+    OAUTH_TOKENS_ODNOKLASSNIKI_CLIENT_ID = 12345678                         # application id
     OAUTH_TOKENS_ODNOKLASSNIKI_CLIENT_PUBLIC = ''                           # application public key
     OAUTH_TOKENS_ODNOKLASSNIKI_CLIENT_SECRET = ''                           # application secret key
     OAUTH_TOKENS_ODNOKLASSNIKI_SCOPE = ['']                                 # application scopes
